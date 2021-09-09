@@ -1,0 +1,15 @@
+@mixin tablets {
+  @media (max-width: 768px){
+      @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: 480px){
+      @content;
+  }
+}
+
+@function rem($px){
+	@return $px / $baseFontsSize + 0rem;
+}
