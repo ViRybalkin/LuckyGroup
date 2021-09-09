@@ -7,8 +7,9 @@ html{
 }
 body{
   font-family: 'montserrat', Arial, Helvetica, sans-serif;
-  font-size: $baseFontsSize;
   line-height: 1.42;
+  height: 100%;
+  width: 100%;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   overflow: hidden;
@@ -58,4 +59,32 @@ button{
 input[type="submit"],
 input[type="reset"]{
 cursor: pointer;
+}
+
+.wrapper{
+  overflow: hidden;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction:column;
+}
+
+.main-content{
+  height: 100%;
+}
+
+.section{
+  height: 100%;
+}
+.container{
+  height: 100%;
+  max-width:95%;
+  background:$main-bg;
+  margin: 0 auto;
+}
+
+.container-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

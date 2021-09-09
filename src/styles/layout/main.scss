@@ -1,5 +1,12 @@
+@import './normalize';
 @import './fonts';
 @import './variables';
 @import './mixins';
 @import './base';
 
+
+@import '../blocks/hero';
+@import '../blocks/form';
+@import '../blocks/preview';
+@import '../blocks/select';
+@import '../blocks/btn';
