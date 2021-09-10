@@ -4,6 +4,8 @@
 html {
   height: 100%;
   font-size: $baseFontsSize;
+  overflow-x: hidden;
+  overflow: scroll;
   @include phone {
     font-size: 10px;
   }
@@ -99,4 +101,13 @@ input[type='reset'] {
   @include phone {
     margin-top: 60px;
   }
+}
+
+.container__footer {
+  display: flex;
+  padding: 11px 80px;
+  justify-content: space-between;
+  background: #f8f8f8;
+  font-size: 14px;
+  font-size: 800;
 }

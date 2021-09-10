@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
     @include phone {
-      padding: 28px 40px;
+      padding: 28px 20px;
     }
   }
   &__row {
@@ -20,6 +20,7 @@
       margin-bottom: 20px;
     }
     &-title {
+      font-weight: 800;
       margin-bottom: 10px;
       & span {
         color: $green;
@@ -62,7 +63,8 @@
     display: flex;
     align-items: center;
     text-align: center;
-    padding: rem(0px) rem(20px);
+    line-height: 1.7;
+    padding: rem(0px) rem(40px);
     @include phone {
       background: $white;
     }
