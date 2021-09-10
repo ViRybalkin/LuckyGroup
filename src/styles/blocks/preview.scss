@@ -1,3 +1,78 @@
-.preview{
-  background:linear-gradient(180deg, #428A60 0%, #35734F 100%);
+.preview {
+  position: relative;
+  background-image: linear-gradient(180deg, #428a60 0%, #35734f 100%);
+  z-index: 2;
+  height: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+  @include phone {
+    background: $white;
+    flex-direction: row;
+  }
+  &__name {
+    font-size: 18px;
+    color: $white;
+    @include phone {
+      color: $black;
+    }
+    &:first-child {
+      margin: 40px 40px 0;
+      @include phone {
+        margin-top: 30px;
+      }
+    }
+    &:last-child {
+      margin: 0 40px 40px;
+      @include phone {
+        margin-top: 30px;
+      }
+    }
+  }
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+  }
+  &::before {
+    background: url(../../img/circle-big.svg) no-repeat;
+    background-position: top -20px left 200px;
+    width: 688px;
+    height: 688px;
+    opacity: 0.03;
+    @include phone {
+      display: none;
+    }
+  }
+  &:after {
+    background: url(../../img/circle-small.svg) no-repeat;
+    width: 398px;
+    height: 398px;
+    top: 15%;
+    left: 6%;
+    background-size: contain;
+    @include desktop {
+      width: 300px;
+      height: 300px;
+      top: 33%;
+    }
+  }
+  &__image {
+    position: absolute;
+    background: url('../../img/pills.jpg') no-repeat;
+    z-index: 1;
+    background-size: contain;
+    bottom: 9%;
+    left: 11%;
+    width: 424px;
+    height: 231px;
+    @include desktop {
+      width: 280px;
+      height: 180px;
+    }
+  }
 }

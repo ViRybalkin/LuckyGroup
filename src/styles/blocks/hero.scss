@@ -1,6 +1,11 @@
 .hero {
   display: flex;
+  width: 1000px;
   &__block {
     flex: 1;
+  }
+  @include tablets {
+    flex: 0;
+    flex-direction: column;
   }
 }

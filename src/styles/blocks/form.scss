@@ -32,6 +32,13 @@
     padding-left: 20px;
     border-radius: 5px;
     background: $grey;
+    transition: 0.4s;
+    border: 1px solid #e4e4e4;
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: $green;
+    }
     &::placeholder {
       opacity: 0.2;
     }
@@ -42,5 +49,6 @@
     display: flex;
     align-items: center;
     text-align: center;
+    padding: 0 40px;
   }
 }

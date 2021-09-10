@@ -1,56 +1,73 @@
-.select{
+.select {
   width: 116px;
-  height:50px;
+  height: 50px;
   margin: 0 auto;
   position: relative;
-  &-active .select__list{
-    display: flex;
+  transition: opacity 1s ease;
+
+  &-active .select__list {
+    opacity: 1;
+    right: 0;
   }
-  &__header{
-    background:$grey;
-    padding:7px 8px;
+  &__header {
+    background: $grey;
+    padding: 7px 8px;
     display: flex;
-    border: 1px solid #E4E4E4;
-    border-radius:5px;
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
     cursor: pointer;
     justify-content: space-around;
     align-items: center;
+    border: 1px solid #e4e4e4;
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: $green;
+    }
   }
-  &__current{
+  &__current {
     display: flex;
     align-items: center;
     padding: 8px;
   }
-  &__current img{
+  &__current img {
     width: 20px;
     margin-left: 10px;
   }
-  &__list{
-    border: 1px solid #E4E4E4;
-    background:$grey;
+  &__list {
+    opacity: 0;
+    display: flex;
+    border: 1px solid #e4e4e4;
+    background: $grey;
     border-radius: 0 0 5px 5px;
     border-top: 0;
     position: absolute;
-    display: none;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    flex-direction:column;
+    flex-direction: column;
+    right: -9999px;
     left: 0;
-    right: 0;
-    top:100%;
+    top: 100%;
+    transition: opacity 0.4s ease;
+    z-index: 1;
   }
-  &__item{
+  &__item {
     display: flex;
     align-items: center;
     padding: 5px;
     margin-right: 5px;
     cursor: pointer;
-
+    // transition: 0.4s ease;
+    transform: perspective(1px) translateZ(0);
+    transition: transform 0.4s;
+    &:hover {
+      color: $green;
+      transform: scale(1.1);
+    }
   }
-  &__item img{
+  &__item img {
     width: 20px;
     margin-left: 10px;
   }
-  }
-
+}
