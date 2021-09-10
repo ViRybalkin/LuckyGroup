@@ -9,9 +9,13 @@
   flex-direction: column;
   justify-content: space-between;
   height: 500px;
-  @include phone {
-    background: $white;
+  @include tablets {
     flex-direction: row;
+    overflow: visible;
+  }
+  @include phone {
+    max-height: 232px;
+    background: $white;
   }
   &__name {
     font-size: 18px;
@@ -21,14 +25,20 @@
     }
     &:first-child {
       margin: 40px 40px 0;
-      @include phone {
+      @include tablets {
         margin-top: 30px;
+      }
+      @include phone {
+        margin: 20px 20px 0;
       }
     }
     &:last-child {
       margin: 0 40px 40px;
-      @include phone {
+      @include tablets {
         margin-top: 30px;
+      }
+      @include phone {
+        margin: 20px 20px 0;
       }
     }
   }
@@ -60,6 +70,13 @@
       height: 300px;
       top: 33%;
     }
+    @include phone {
+      width: 202px;
+      height: 202px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -32%);
+    }
   }
   &__image {
     position: absolute;
@@ -73,6 +90,12 @@
     @include desktop {
       width: 280px;
       height: 180px;
+    }
+    @include phone {
+      width: 223px;
+      height: 122px;
+      bottom: -6%;
+      left: 20%;
     }
   }
 }

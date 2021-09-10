@@ -5,7 +5,6 @@
     flex: 1;
   }
   @include tablets {
-    flex: 0;
     flex-direction: column;
   }
 }
