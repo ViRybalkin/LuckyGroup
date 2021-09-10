@@ -10,7 +10,7 @@
 
 ```sh
 $ git clone https://github.com/ViRybalkin/LuckyGroup.git
-$ cd Lucky Group
+$ cd LuckyGroup
 $ npm install
 ```
 
